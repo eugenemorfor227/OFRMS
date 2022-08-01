@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="admin.css">
     <title>Admin Dashboard</title>
     <style>
+      /*style for this page*/
       body::before{
     display: block;
     content: '';

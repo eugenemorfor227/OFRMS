@@ -11,6 +11,7 @@
     <title>Admin Dashboard</title>
     <style>
       /*style for this page*/
+      /*internal css*/
       body::before{
     display: block;
     content: '';

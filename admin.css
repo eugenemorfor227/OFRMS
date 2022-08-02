@@ -37,7 +37,7 @@ main{
 }
 body{
     font-family: 'Times New Roman', Times, serif;
-    background: url(car\ 2.jpg);
+    background: url(photos/car\ 2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 23px;

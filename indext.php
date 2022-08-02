@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="User Home.css">
+    <link rel="stylesheet" href="index.css">
     <title>OFRMS Home</title>
 </head>
 <body>
@@ -82,7 +82,7 @@
                 </form>
               </div>
               <div class="modal-footer">
-               <a href="Admin Dashboard.html"><button type="button" class="btn btn-primary m-1 p-2" >Confirm</button></a>
+               <a href="Admin_Dashboard.php"><button type="button" class="btn btn-primary m-1 p-2" >Confirm</button></a>
 
                 <button  type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
               </div>
@@ -108,7 +108,7 @@
                         </p>
                         
                 </div>
-                <img class=" img img-fluid w-40  d-sm-block" src="User Home Picture.png" alt="">
+                <img class=" img img-fluid w-40  d-sm-block" src="photos/User Home Picture.png" alt="">
             </div>
         </div>
     </section>

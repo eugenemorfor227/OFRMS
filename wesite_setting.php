@@ -16,7 +16,7 @@
     height: 60px;
 }
 body{
-    background:url(Admin\ Dashboard\ Background.jpg);
+    background:url(photos/Admin\ Dashboard\ Background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     font-family: 'Times New Roman', Times, serif;
@@ -86,9 +86,9 @@ h3{
           <i class="bi bi-person-fill"></i>
         </a>
         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-          <li><a class="dropdown-item fw-bold" href="Edit profile.html">Edit Profile</a></li>
+          <li><a class="dropdown-item fw-bold" href="Edit_profile.php">Edit Profile</a></li>
           <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item fw-bold" href="#">Change Password</a></li>
+          <li><a class="dropdown-item fw-bold" href="change_password.php">Change Password</a></li>
         </ul>
       </li>
       </ul>
@@ -105,7 +105,7 @@ h3{
      <nav class="navbar-dark">
        <ul class="navbar-nav">
          <li>
-            <a href="Admin Dashboard.html" class="navlink px-3 active">
+            <a href="Admin_Dashboard.php" class="navlink px-3 active">
               <span><i class="bi bi-speedometer2 me-2"></i></span>
               <span>Dashboard</span>
             </a>
@@ -124,7 +124,7 @@ h3{
             <div>
              <ul class="navbar-nav ps-3">
                <li>
-                 <a href="Create new team.html" class="nav-link ps-3">
+                 <a href="Create_new_team.php" class="nav-link ps-3">
                   <span class="me-2"><i class="bi bi-plus"></i></span>
                   <span>Add Team</span>
                  </a>
@@ -199,7 +199,7 @@ h3{
                  </a>
                </li>
                <li>
-                <a href="Search report.html" class="nav-link ps-3">
+                <a href="Search_report.php" class="nav-link ps-3">
                  <span>Search</span>
                 </a>
               </li>
@@ -213,7 +213,7 @@ h3{
 
         <!--home-->
         <li>
-          <a class="nav-link px-3 sidebar-link" href="User Home.html">
+          <a class="nav-link px-3 sidebar-link" href="index.php">
           <span class="me-2"><i class="bi bi-house"></i></span>
           <span>Home</span>
           <span class="right-icon ms-auto"></span>
@@ -225,7 +225,7 @@ h3{
          </li>
          <!--setting-->
          <li>
-          <a class="nav-link px-3 sidebar-link" href="wesite setting.html">
+          <a class="nav-link px-3 sidebar-link" href="wesite_setting.php">
           <span class="me-2"><i class="bi bi-gear-fill"></i></span>
           <span>Website Setting</span>
           <span class="right-icon ms-auto"></span>

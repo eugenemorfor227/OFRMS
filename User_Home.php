@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="User Home.css">
     <title>OFRMS Home</title>
 </head>
 <body>
@@ -18,7 +18,7 @@
             <div class="collapse navbar-collapse" id="navmenu">
                 <ul class="navbar ms-auto">
                     <li class="nav-item">
-                        <a href="User Home.html" class="nav-link"><i class="bi bi-house-fill"></i> Home</a>
+                        <a href="index.php" class="nav-link"><i class="bi bi-house-fill"></i> Home</a>
                     </li>
                     <li class="nav-item">
                         <a href="#questions" class="nav-link"><i class="bi bi-info-circle-fill"></i>About</a>
@@ -69,7 +69,7 @@
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
               </div>
               <div class="modal-body">
-                <form action="">
+                <form action="submit.php" method="POST">
                     <div class="mb-3">
                         <label for="username" class="col-form-label">Username:</label>
                         <input type="text" class="form-control" name="username" id="username" required>
@@ -79,13 +79,14 @@
                         <input type="password" class="form-control" name="password" id="password" required>
                     </div>
                     <input type="checkbox"> Remember me
-                </form>
-              </div>
-              <div class="modal-footer">
-               <a href="Admin_Dashboard.php"><button type="button" class="btn btn-primary m-1 p-2" >Confirm</button></a>
+                    <div class="modal-footer">
+             <a href="Admin_Dashboard.php"><button name="submit" type="submit" class="btn btn-primary m-1 p-2" >Confirm</button></a>
 
                 <button  type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
               </div>
+                </form>
+              </div>
+              
               
             </div>
           </div>
@@ -108,7 +109,7 @@
                         </p>
                         
                 </div>
-                <img class=" img img-fluid w-40  d-sm-block" src="photos/User Home Picture.png" alt="">
+                <img class=" img img-fluid w-40  d-sm-block" src="User Home Picture.png" alt="">
             </div>
         </div>
     </section>
@@ -122,9 +123,9 @@
                     <i class="bi bi-flag-fill"></i> Report Fire Incident
             
                   </button>
-                  <button class="btn btn-primary m-4 p-2"><i class="bi-eye "></i>View Status
+                 <a href="User_display.php"><button class="btn btn-primary m-4 p-2"><i class="bi-eye "></i>View Status
                   
-                  </button>
+                  </button></a>
      
             </div>                                    
 
@@ -144,14 +145,14 @@
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
               </div>
               <div class="modal-body">
-                <form action="">
+                <form action="submit.php" method="POST">
                     <div class="mb-3">
                         <label for="Name" class="col-form-label">Name:</label>
-                        <input type="text" class="form-control" name="location" id="name" required>
+                        <input type="text" class="form-control" name="name" id="name" required>
                     </div>
                     <div class="mb-3">
                         <label for="phonenumber" class="col-form-label">Phonenumber:</label>
-                        <input type="number" class="form-control" name="location" id="Phonenumber" required>
+                        <input type="number" class="form-control" name="phonenumber" id="Phonenumber" required>
                     </div>
                     <div class="mb-3">
                         <label for="location" class="col-form-label">Location:</label>
@@ -161,12 +162,13 @@
                         <label for="location" class="col-form-label">Describe Incident:</label>
                         <textarea name="message" id="message" cols="30" rows="3" placeholder="Write something...."></textarea>
                     </div>
-                </form>
-              </div>
-              <div class="modal-footer">
-               <a href=""><button type="button" class="btn btn-primary m-1 p-2" >Confirm</button></a>
+                    <div class="modal-footer">
+               <button name="submit" type="submit" class="btn btn-primary m-1 p-2" >Submit</button>
 
                 <button  type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </form>
+              </div>
+              
               </div>
               
             </div>
@@ -191,11 +193,6 @@
         </div>
       
       </footer>
-
- 
-
-
-
 
 
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

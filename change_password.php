@@ -16,7 +16,7 @@
     height: 60px;
 }
 body{
-    background:url(photos/Admin\ Dashboard\ Background.jpg);
+    background:url(Admin\ Dashboard\ Background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     font-family: 'Times New Roman', Times, serif;
@@ -81,7 +81,7 @@ body{
         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
           <li><a class="dropdown-item fw-bold" href="Edit_profile.php">Edit Profile</a></li>
           <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item fw-bold" href="#">Change Password</a></li>
+          <li><a class="dropdown-item fw-bold" href="change_password.php">Change Password</a></li>
         </ul>
       </li>
       </ul>
@@ -123,7 +123,7 @@ body{
                  </a>
                </li>
                <li>
-                <a href="" class="nav-link ps-3">
+                <a href="Teams_display.php" class="nav-link ps-3">
                  <span class="me-2"><i class="bi bi-kanban-fill"></i></span>
                  <span>Manage Teams</span>
                 </a>

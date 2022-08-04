@@ -10,15 +10,13 @@
     <link rel="stylesheet" href="admin.css">
     <title>Admin Dashboard</title>
     <style>
-      /*style for this page*/
-      /*internal css*/
       body::before{
     display: block;
     content: '';
     height: 60px;
 }
 body{
-    background:url(photos/Admin\ Dashboard\ Background.jpg);
+    background:url(Admin\ Dashboard\ Background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     font-family: 'Times New Roman', Times, serif;
@@ -75,6 +73,7 @@ body{
           <button class="btn btn-primary" type="button" id="button-addon2"><i class="bi bi-search"></i></button>
         </div>
       </form>
+      
       <ul class="navbar-nav mb-2 mb-lg-0">
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -100,10 +99,11 @@ body{
      <nav class="navbar-dark">
        <ul class="navbar-nav">
          <li>
-            <a href="Admin_Dashboard.php" class="navlink px-3 active">
+            <a href="Admin Dashboard.html" class="navlink px-3 active">
               <span><i class="bi bi-speedometer2 me-2"></i></span>
               <span>Dashboard</span>
             </a>
+              
          </li>
          <li class="my-4">
            <hr class="dropdown-divider">
@@ -125,7 +125,7 @@ body{
                  </a>
                </li>
                <li>
-                <a href="" class="nav-link ps-3">
+                <a href="Teams_display.php" class="nav-link ps-3">
                  <span class="me-2"><i class="bi bi-kanban-fill"></i></span>
                  <span>Manage Teams</span>
                 </a>

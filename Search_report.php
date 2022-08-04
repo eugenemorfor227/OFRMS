@@ -16,7 +16,7 @@
     height: 60px;
 }
 body{
-    background:url(photose/Admin\ Dashboard\ Background.jpg);
+    background:url(Admin\ Dashboard\ Background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     font-family: 'Times New Roman', Times, serif;
@@ -192,7 +192,7 @@ body{
                  </a>
                </li>
                <li>
-                <a href="" class="nav-link ps-3">
+                <a href="Search_report.php" class="nav-link ps-3">
                  <span>Search</span>
                 </a>
               </li>
@@ -274,21 +274,58 @@ body{
                      
                    </div>
                    <div class="modal-body">
-                     <form action="">
+                     <form action="" method="POST">
                          <div class="mb-3">
-                             <label for="website title" class="col-form-label">Search By name/Location/Number:</label>
-                             <input class="form-control mr-sm-2" type="text" placeholder="write Something">
+                         <input type="text" class="form-control mr-sm-2" name="id" placeholder="write Something">
+                             <input type="submit" value="SEARCH BY ID" class="form-control mr-sm-2" name="search">
                          </div>
-                        
+                         <div class="modal-footer">
+                 <button type="button" name="search" class="btn btn-primary m-1 p-2"  >Search</button>
+     
+                     <button name="submit"  type="submit" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                   </div>
                         
                      </form>
                    </div>
-                   <div class="modal-footer">
-                 <button type="button" class="btn btn-primary m-1 p-2" >Search</button>
-     
-                     <button  type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-                   </div>
-                   
+                 
+                     <table>
+                      <tr>
+                     
+            <th>Name</th>
+            <th>Phonenumber</th>
+            <th>Location</th>
+            <th>Message</th>
+                      </tr><br>
+ <?php
+                      
+$server = "localhost";
+ $username = "root";
+ $password = "";
+ $dbname = "reportform";
+
+
+ $connection = mysqli_connect($server, $username, $password, $dbname);
+ if(isset($_POST['search'])){
+  $id = $_POST['id'];
+  $query = "SELECT * FROM submits where 'Name' = $'$id' ";
+  $query_run = mysqli_query($connection, $query);
+  while($row= mysqli_fetch_array($query_run)){
+    echo "<tr>
+  
+    <td>". $row["ID"] ."</td>
+    <td>". $row["Phonenumber"] ."</td>
+    <td>". $row["Location"] ."</td>
+    <td>". $row["Message"] ."</td>
+    </tr>";
+  }
+ }
+
+?>
+
+
+
+
+                     </table>
                  </div>
                </div>
            

@@ -16,7 +16,7 @@
     height: 60px;
 }
 body{
-    background:url(photos/Admin\ Dashboard\ Background.jpg);
+    background:url(Admin\ Dashboard\ Background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     font-family: 'Times New Roman', Times, serif;
@@ -127,7 +127,7 @@ body{
             <div>
              <ul class="navbar-nav ps-3">
                <li>
-                 <a href="" class="nav-link ps-3">
+                 <a href="create_new_team.php" class="nav-link ps-3">
                   <span class="me-2"><i class="bi bi-plus"></i></span>
                   <span>Add Team</span>
                  </a>
@@ -216,7 +216,7 @@ body{
 
         <!--home-->
         <li>
-          <a class="nav-link px-3 sidebar-link" href="index.php">
+          <a class="nav-link px-3 sidebar-link" href="index.php.html">
           <span class="me-2"><i class="bi bi-house"></i></span>
           <span>Home</span>
           <span class="right-icon ms-auto"></span>
@@ -285,31 +285,29 @@ body{
                 
                </div>
                <div class="modal-body">
-                 <form action="">
+                 <form action="New_team_data.php" method="POST">
                     <div class="mb-3">
-                        <label class="text-dark" for="Team name">Team Name:</label>
-                        <input type="text" class="form-control" id="email" name="teamname">
+                        <label class="text-dark" for="name">Team Name:</label>
+                        <input type="text" class="form-control" id="name" name="name">
                       </div>
                       <div class="mb-3">
                         <label class="text-dark" for="pwd">Team Leader Name:</label>
-                        <input type="text" class="form-control" id="team-leader-name" name="teamleadername">
+                        <input type="text" class="form-control" id="leader" name="leader">
                       </div>
                       <div class="mb-3">
                         <label class="text-dark" for="number">Team Leader Contact Number:</label>
                         <input type="number" class="form-control" id="number"name="number">
                       </div>
                       <div class="mb-3">
-                        <label class="text-dark" for="Team Members">Team Members(separated by comma):</label>
-                        <input type="text" class="form-control" id="team-members" name="teammembers">
+                        <label class="text-dark" for="members">Team Members(separated by comma):</label>
+                        <input type="text" class="form-control" id="members" name="members">
                       </div>
-                    
+                      <div class="modal-footer">
+                <button type="submit" name="submit" class="btn btn-primary m-1 p-2" >Create</button>
+               </div>
                  </form>
                </div>
-               <div class="modal-footer">
-                <a href="Admin Dashboard.html"><button type="button" class="btn btn-primary m-1 p-2" >Create</button></a>
- 
-                 <button  type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-               </div>
+               
                
              </div>
            </div>
@@ -320,6 +318,10 @@ body{
     </div>
   </div>
 </main>
+
+
+
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

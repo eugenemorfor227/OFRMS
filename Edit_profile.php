@@ -16,7 +16,7 @@
     height: 60px;
 }
 body{
-    background:url(Admin\ Dashboard\ Background.jpg);
+    background:url(photos/Admin\ Dashboard\ Background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     font-family: 'Times New Roman', Times, serif;

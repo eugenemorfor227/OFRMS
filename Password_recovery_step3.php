@@ -39,7 +39,7 @@
                         <input type="email" class="form-control" id="email" name="email">
                       </div>
                       <div class="modal-footer">
-                        <a href="User_Home.php"><button type="button" name="next" class="btn btn-primary m-1 p-2" >Confirm</button></a>
+                        <a href="User_Home.php"><button onclick="Done()" type="button" name="next" class="btn btn-primary m-1 p-2" >Confirm</button></a>
                   
                      
                   
@@ -57,7 +57,11 @@
      </div>
 
 
-
+  <Script>
+    function Done() {
+      alert("Password Recovery Successful");
+    }
+  </Script>
 
 
 

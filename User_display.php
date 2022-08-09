@@ -19,7 +19,7 @@
             <div class="collapse navbar-collapse" id="navmenu">
                 <ul class="navbar ms-auto">
                     <li class="nav-item">
-                        <a href="index.php" class="nav-link"><i class="bi bi-house-fill"></i> Home</a>
+                        <a href="User_Home.php" class="nav-link"><i class="bi bi-house-fill"></i> Home</a>
                     </li>
                     <li class="nav-item">
                         <a href="#questions" class="nav-link"><i class="bi bi-info-circle-fill"></i>About</a>
@@ -65,7 +65,7 @@
 
 <div class="main m-5">
 
-    <h1>Fire Reports</h1>
+    <h1>Incedent report Details</h1>
 
     <table class="table">
         <thead style="background:aqua;">
@@ -80,7 +80,39 @@
            </tr>
         </thead>
         <tbody>
-           
+            <?php
+                $servername = "localhost";
+                $username = "root";
+                $password = "";
+                $database = "reportform";
+
+                $connection = new mysqli($servername,$username,$password,$database);
+
+                if($connection -> connect_error){
+                    die("connection failed" . $connection -> connect_error);
+                }
+                $sql = "SELECT * FROM submit";
+                $result =$connection -> query($sql);
+
+                if(!$result){
+                    die("valid query:" . $connection -> error);
+                }
+                while($row = $result -> fetch_assoc()){
+                    echo "<tr>
+                       <td>". $row["ID"] ."</td>
+                       <td>". $row["Name"] ."</td>
+                       <td>". $row["Phonenumber"] ."</td>
+                       <td>". $row["Location"] ."</td>
+                       <td>". $row["Message"] ."</td>
+                       <td><button class='btn btn-primary btn-sm'>Respond</button></td>
+                       <td><a href='sample.php?rn=$row[Name]'> <button class='btn btn-danger btn-sm'>Delete</button></a></td>
+
+                    </tr>";
+                }
+
+
+
+            ?>
         </tbody>
     </table>
 

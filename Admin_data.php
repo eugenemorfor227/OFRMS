@@ -10,7 +10,7 @@
     <title>Admin Info</title>
 </head>
 <body style="margin:50px;">
-    <h1>Admin Profile Details</h1>
+    <h1>Admin Data</h1>
 
     <table class="table">
         <thead style="background:aqua;">
@@ -22,8 +22,36 @@
            </tr>
         </thead>
         <tbody>
-            <!--Display admins profile details on the browser-->
-               
+            <?php
+                $servername = "localhost";
+                $username = "root";
+                $password = "";
+                $database = "admininfo";
+
+                $connection = new mysqli($servername,$username,$password,$database);
+
+                if($connection -> connect_error){
+                    die("connection failed" . $connection -> connect_error);
+                }
+                $sql = "SELECT * FROM admininfo";
+                $result =$connection -> query($sql);
+
+                if(!$result){
+                    die("valid query:" . $connection -> error);
+                }
+                while($row = $result -> fetch_assoc()){
+                    echo "<tr>
+                       <td>". $row["ID"] ."</td>
+                       <td>". $row["Username"] ."</td>
+                       <td>". $row["Password"] ."</td>
+                       <td><button class='btn btn-danger btn-sm'>update</button></td>
+                    </tr>";
+
+        
+                }
+       
+
+            ?>
         </tbody>
     </table>
 

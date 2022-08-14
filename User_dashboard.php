@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
-    <title>Home</title>
+    <title>User Dashboard</title>
 </head>
 <style>
    body {
@@ -43,7 +43,6 @@
   background-color: #5857b8;
   color: white;
   float: left;
-  border-top-right-radius:8px;
 }
 
 .topnav .icon1 {
@@ -191,8 +190,7 @@
   bottom: 0;
   right: 15px;
   border: 3px solid #f1f1f1;
-  z-index: 1;
-  overflow:hidden;
+  z-index: 9;
 }
 
 
@@ -298,6 +296,7 @@ outline: none;
   width: 100%;
   border-radius:6px;
   transition:.3s ease;
+  font-size:15px;
 }
 
 .button3:hover {
@@ -339,12 +338,12 @@ outline: none;
    
         </head>
         <body>
-          
 <!--Navbar-->
     <div class="topnav" id="myTopnav">
       <a href="#home" class="active">OFRMS</a>
-       
-   
+      
+      <a href="#"><i class="fa fa-sign-out"></i></a>
+      <a href="#"><i class="fa fa-user-circle"></i> profile</a>
         <a href="Contact.php"><i class="fa fa-address-card"></i> Contact</a>
         <a href="Report_form.php"><i class="fa fa-info-circle"></i> About</a>
         <a href="#about"><i class="fa fa-home"></i> Home</a>
@@ -356,7 +355,6 @@ outline: none;
   </div>  
 </div>
 </div>
-
             
  <!--Description section-->
             
@@ -370,12 +368,12 @@ outline: none;
                  
                    
                   </div>
-                
-<div class="row3">
+                 
+                  <div class="row3">
   <div class="column3">
     <div class="card3">
       <div class="container3">
-        <a href="Login.php"><p><button class="button3">LOGIN <i class="fa fa-sign-in"></i></button></p></a>
+        <a href="Report_form.php"><p><button class="button3">Report Incident  <i class="fa fa-file"></i></button></p></a>
       </div>
     </div>
   </div>
@@ -383,14 +381,13 @@ outline: none;
   <div class="column3">
     <div class="card3">
       <div class="container3">
-        <a href="Registration.php"><p><button class="button3">REGISTER <i class="fa fa-sign-in"></i></button></p></a>
+        <a href="Database contents/User_display.php"><p><button class="button3">View Status  <i class="fa fa-eye"></i></button></p></a>
       </div>
     </div>
   </div>
 </div>
-</div>
-</div>
-               
+                  </div>
+                </div>
 <!--chat pop up-->
 <button class="open-button1" onclick="openForm()"><i class="fa fa-comments"></i></button>
 
@@ -406,7 +403,14 @@ outline: none;
   </form>
 </div>
 
-
+<!--footer-->
+<!--footer-->
+<div class="footer">
+    <h2>OFRMS &copy;2022 </h2>
+    <p>
+        <a href="">Author</a>
+    </p>
+</div>
        <!--for navbar responsiveness-->
         <script>
             function NavbarIcon() {
@@ -421,13 +425,8 @@ outline: none;
 
             <!--for admin form pop up-->
 
- <!--footer-->
- <div class="footer">
-    <h2>OFRMS &copy;2022 </h2>
-    <p>
-        <a href="">Author</a>
-    </p>
-</div>
+
+
 <!--scroll detect-->
 <script>
 window.onscroll = function() {myFunction()};

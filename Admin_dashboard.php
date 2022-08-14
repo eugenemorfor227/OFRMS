@@ -45,6 +45,9 @@
   
   color: white;
 }
+.topnav a.active:hover{
+  background-color:none;
+}
 
 .topnav .icon {
   display: none;
@@ -108,58 +111,6 @@
   .sidenav a {font-size: 18px;}
 }
 /*dasboard body*/
-.tablink {
-    background:linear-gradient(grey,white,grey);
-  color: rgb(0, 0, 0);
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 15px 16px;
-  font-size: 17px;
-  width: 25%;
-  transition: .3s;
-  border-left: 1px solid black;
- 
-}
-.tablink:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(7px);
-}
-
-.tablink:hover {
-  background-color: rgb(118, 117, 219);
- 
-}
-
-/* Style the tab content (and add height:100% for full page content) */
-.tabcontent {
-  color: white;
-  display: none;
-  padding: 100px 20px;
-  height: 300px;
-  background-color: black;
-  border: 2px solid black;
-  text-align: center;
-}
-
-#Home {background:url(bg.jpg);
- background-repeat: no-repeat;
- background-size: cover;
-}
-#News {background:url(bg.jpg);
-  background-repeat: no-repeat;
- background-size: cover;
-}
-#Contact {background:url(bg.jpg);
-  background-repeat: no-repeat;
- background-size: cover;
-}
-#About {background:url(bg.jpg);
-  background-repeat: no-repeat;
- background-size: cover;
-}
 
 p{
   text-align: center;
@@ -234,34 +185,26 @@ footer p a{
   cursor: pointer;
   outline: none;
   font-family: 'Times New Roman', Times, serif;
+  transition:0.3s ease;
 }
-
-/* On mouse-over */
 .sidenav a:hover, .dropdown-btn:hover {
-  color: #f1f1f1;
+  color: blue;
 }
-
-
-/* Add an active class to the active dropdown button */
 .active {
-
   color: white;
 }
-
-/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.active:hover{
+  background-color:none;
+}
 .dropdown-container {
   display: none;
   background-color: #262626;
   padding-left: 12px;
 }
-
-/* Optional: Style the caret down icon */
 .fa-caret-down {
   float: right;
   padding-right: 8px;
 }
-
-/* Some media queries for responsiveness */
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
@@ -276,8 +219,6 @@ input[type=text], input[type=password] {
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
-
-/* Set a style for all buttons */
 button {
   background-color: #4CAF50;
   color: white;
@@ -287,79 +228,60 @@ button {
   cursor: pointer;
   width: 100%;
 }
-
 button:hover {
   opacity: 0.8;
 }
-
-/* Extra styles for the cancel button */
 .cancelbtn {
   width: auto;
   padding: 10px 18px;
   background-color: #f44336;
 }
-
-/* Center the image and position the close button */
 .imgcontainer {
   text-align: center;
   margin: 24px 0 12px 0;
   position: relative;
 }
-
 img.avatar {
   width: 40%;
   border-radius: 50%;
 }
-
 .container {
   padding: 16px;
 }
-
 span.psw {
   float: right;
   padding-top: 16px;
 }
-
 hr {
   border: 1px solid #04061460;
   margin-bottom: 25px;
 }
 .glow {
-
   color: #fff;
   text-align: center;
   -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;
   animation: glow 1s ease-in-out infinite alternate;
 }
-
 @-webkit-keyframes glow {
   from {
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e60073, 0 0 20px #e60073, 0 0 25px #e60073, 0 0 30px #e60073, 0 0 35px #e60073;
   }
-  
   to {
     text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
   }
 }
-
 .column1 {
   float: left;
   width: 49%;
   padding: 5px 5px;
-  
 }
-
 .row1 {margin: 0 -5px;}
-
-/* Clear floats after the columns */
 .row1:after {
   content: "";
   display: table;
   clear: both;
 }
-
-/* Responsive columns */
 @media screen and (max-width: 600px) {
   .column1 {
     width: 100%;
@@ -367,8 +289,6 @@ hr {
     margin-bottom: 10px;
   }
 }
-
-/* Style the counter cards */
 .card {
   box-shadow: 3px 3px 2px 3px rgba(0, 0, 0, 0.5);
   padding: 16px;
@@ -377,27 +297,18 @@ hr {
   color: white;
   border-radius:4px;
 }
-
-
-
 </style>
 <body>
   <!--topnav-->
     <div class="topnav" id="myTopnav">
         <span style="margin-left: 20px; font-size:30px;cursor:pointer; color:white;" onclick="openNav()">&#9776;</span>
-        
         <a href="Profile.php" style="font-size:25px;" class="active">Profile <i style="padding-left: 5px;" class="fa fa-user-circle"></i></a>
-        
-        
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
           <i class="fa fa-bars"></i>
         </a>
       </div>
 
-      <!--Admin login-->
-   
-
-<!--Sidenav-->
+  <!--Sidenav-->
 
       <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>

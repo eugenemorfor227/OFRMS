@@ -4,304 +4,301 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="admin.css">
-    <title>Search Report</title>
-    <style>
-      body::before{
-    display: block;
-    content: '';
-    height: 60px;
+    <link rel="stylesheet" href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+    <title>Create New team</title>
+</head>
+<style>
+    /*Topnav*/
+    .body{
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: 'Times New Roman', Times, serif;
+        background: url(bg.jpg);
+    }
+    .topnav {
+  overflow: hidden;
+  background-color:rgb(24, 24, 59);
+  
 }
-body{
-    background:url(Admin\ Dashboard\ Background.jpg);
+
+.topnav a {
+  float: right;
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #5361df;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+/*side nav*/
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(8, 10, 43);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  margin-top:8px ;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  transition: 0.5s;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+/*dropdown*/
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+.active {
+  background-color: rgb(48, 46, 179);
+  color: white;
+}
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 12px;
+}
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+/*new Team styling*/
+.container {
+  padding: 16px;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 93%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  border-radius: 6px;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+hr {
+  border: 1px solid #04061460;
+  margin-bottom: 25px;
+}
+
+
+.registerbtn {
+  background-color: #4c66af;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 96%;
+  transition: .3s ease;
+  margin-left: px;
+  border-radius: 6px;
+  font-size: 17px;
+}
+
+.registerbtn:hover {
+  background-color: rgb(27, 124, 153);
+}
+.box{
+    margin:30px;
+    width: 80%;
+    background: url(bg.jpg);
+    box-shadow: 7px 7px 6px 3px rgba(0, 0, 0, 0.925);
+    border-radius: 6px;
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-}
-
-@media(min-width: 768px){
-    .news-input{
-        width: 50%;
-    }
-}
-.sec1{
-    background: rgba(250, 249, 249, 0.288);
-    backdrop-filter: blur(10px);
-}
-.sec2{
-    background: rgba(250, 249, 249, 0.288);
-    backdrop-filter: blur(10px);
-}
-.nav-link{
     color: white;
+
 }
-.login-form{
-    width: 500px;
-    height: 300px;
-   
-}
-.img{
-    margin-top: 5%;
-}
-    </style>
-</head>
-   
+
+</style>
 <body>
-   
-<!--navbar-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container-fluid">
-    <!--sidebar button-->
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-      <span class="navbar-toggler-icon"></span>Menu
-    </button>
-    <!--sidebar button-->
-    <a class="navbar-brand fw-bold" href="#">OFRMS | Admin</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-     
-       
-      <form class="d-flex ms-auto">
-        <div class="input-group my-2 my-lg-0">
-          <input type="text" class="form-control" placeholder="Search.." aria-label="Recipient's username" aria-describedby="button-addon2">
-          <button class="btn btn-primary" type="button" id="button-addon2"><i class="bi bi-search"></i></button>
-        </div>
-      </form>
-      <ul class="navbar-nav mb-2 mb-lg-0">
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <i class="bi bi-person-fill"></i>
-        </a>
-        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-          <li><a class="dropdown-item fw-bold" href="Edit profile.html">Edit Profile</a></li>
-          <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item fw-bold" href="change password.html">Change Password</a></li>
-        </ul>
-      </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<!--navbar-->
-
-<!--off canvas menu-->
-
-<div class="offcanvas offcanvas-start bg-dark text-light sidebar-nav" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
- 
-  <div class="offcanvas-body p-0">
-     <nav class="navbar-dark">
-       <ul class="navbar-nav">
-         <li>
-            <a href="Admin Dashboard.html" class="navlink px-3 active">
-              <span><i class="bi bi-speedometer2 me-2"></i></span>
-              <span>Dashboard</span>
-            </a>
-         </li>
-         <li class="my-4">
-           <hr class="dropdown-divider">
-         </li>
-         <!--teams-->
-         <li>
-          <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-          <span class="me-2"><i class="bi bi-people"></i></span>
-          <span>Teams</span>
-          <span class="right-icon ms-auto"><i class="bi bi-chevron-down"></i></span>
-          </a>
-          <div class="collapse" id="collapseExample">
-            <div>
-             <ul class="navbar-nav ps-3">
-               <li>
-                 <a href="Create new team.html" class="nav-link ps-3">
-                  <span class="me-2"><i class="bi bi-plus"></i></span>
-                  <span>Add Team</span>
-                 </a>
-               </li>
-               <li>
-                <a href="" class="nav-link ps-3">
-                 <span class="me-2"><i class="bi bi-kanban-fill"></i></span>
-                 <span>Manage Teams</span>
-                </a>
-              </li>
-             </ul>
-            </div>
-          </div>
-         </li>
-         <!--fire relief-->
-         <li>
-          <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#fire-alerts" role="button" aria-expanded="false" aria-controls="collapseExample">
-          <span class="me-2"><i class="bi bi-bell-fill"></i></span>
-          <span>Fire Alerts</span>
-          <span class="right-icon ms-auto"><i class="bi bi-chevron-down"></i></span>
-          </a>
-          <div class="collapse" id="fire-alerts">
-            <div>
-             <ul class="navbar-nav ps-3">
-               <li>
-                 <a href="Admin Dashboard.html" class="nav-link ps-3">
-                  <span>New alerts</span>
-                 </a>
-               </li>
-               <li>
-                <a href="Admin Dashboard.html" class="nav-link ps-3">
-                 <span>Assigned Requests</span>
-                </a>
-              </li>
-              <li>
-                <a href="Admin Dashboard.html" class="nav-link ps-3">
-                 <span>Teams On The Way</span>
-                </a>
-              </li>
-              <li>
-                <a href="Admin Dashboard.html" class="nav-link ps-3">
-                 <span>Relief Work In Progress</span>
-                </a>
-              </li>
-              <li>
-                <a href="Admin Dashboard.html" class="nav-link ps-3">
-                 <span>Completed Requests</span>
-                </a>
-              </li>
-              <li>
-                <a href="Admin Dashboard.html" class="nav-link ps-3">
-                 <span>All requests</span>
-                </a>
-              </li>
-             </ul>
-            </div>
-          </div>
-         </li>
-         <!--reports-->
-         <li>
-          <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#reports" role="button" aria-expanded="false" aria-controls="collapseExample">
-          <span class="me-2"><i class="bi bi-flag-fill"></i></span>
-          <span>Reports</span>
-          <span class="right-icon ms-auto"><i class="bi bi-chevron-down"></i></span>
-          </a>
-          <div class="collapse" id="reports">
-            <div>
-             <ul class="navbar-nav ps-3">
-               <li>
-                 <a href="" class="nav-link ps-3">
-                  <span>B/W Date</span>
-                 </a>
-               </li>
-               <li>
-                <a href="" class="nav-link ps-3">
-                 <span>Search</span>
-                </a>
-              </li>
-             </ul>
-            </div>
-          </div>
-         </li>
-         <li class="my-4">
-          <hr class="dropdown-divider">
-        </li>
-
-        <!--home-->
-        <li>
-          <a class="nav-link px-3 sidebar-link" href="User Home.html">
-          <span class="me-2"><i class="bi bi-house"></i></span>
-          <span>Home</span>
-          <span class="right-icon ms-auto"></span>
-          </a>
-          <div>
-            <div>
-            </div>
-          </div>
-         </li>
-         <!--setting-->
-         <li>
-          <a class="nav-link px-3 sidebar-link" href="wesite setting.html">
-          <span class="me-2"><i class="bi bi-gear-fill"></i></span>
-          <span>Setting</span>
-          <span class="right-icon ms-auto"></span>
-          </a>
-          <div>
-            <div>
-            </div>
-          </div>
-         </li>
-
-         <li>
-          <a class="nav-link px-3 sidebar-link" href="#">
-            <button type="button" class="btn btn-primary position-relative">
-              Notifications
-              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                99+
-                <span class="visually-hidden">unread messages</span>
-              </span>
-            </button>
-          
-          </a>
-          <div>
-            <div>
-            </div>
-          </div>
-         </li>
-         <li class="my-4">
-          <hr class="dropdown-divider">
-        </li>
-
+     <!--topnav-->
+     <div class="topnav" id="myTopnav">
+        <span style="margin-left: 20px; font-size:30px;cursor:pointer; color:white;" onclick="openNav()">&#9776;</span>
+        <a href="Profile.php" class="active">Profile <i style="padding-left: 5px;" class="fa fa-caret-down"></i></a>
         
+        
+        
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+
+<!--Sidenav-->
+
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <h2 style="text-align: center; color:white;">OFRMS | Admin</h2><hr>
+        <a href="Admin_dashboard.php">Dashboard</a>
+        <hr>
+        
+        <button class="dropdown-btn"> <i style="padding-right: 5px;" class="fa fa-users"></i> Teams 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="Create_new_team.php">Create New Team</a>
+          <a href="#">Manage Teams</a>
+        </div>
+        <button class="dropdown-btn"><i style="padding-right: 7px;" class="fa fa-fire"></i>Fire Alerts 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="#">New Alerts</a>
+          <a href="#">Assigned Requests</a>
+          <a href="#">Teams On The Way</a>
+          <a href="#">Relief Work In Progress</a>
+          <a href="#">Completed Requests</a>
+          <a href="#">all Requests</a>
+        </div>
+        <button class="dropdown-btn"><i style="padding-right: 7px;" class="fa fa-file"></i>Reports
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="#">B/W date</a>
+          <a href="Create_new_team.php">Search Report</a>
+         
+        </div><hr>
+        <a href="Website_setting.php"><i class="fa fa-gear"></i>Website Setting</a>
+        <a href="index.php"><i class="fa fa-home"></i>Home</a>
+      </div><hr>
+      <div style="color: rgb(255, 255, 255); text-shadow: 2px 3px 3px rgb(253, 253, 255); border-radius: 6px; text-align: center; padding: 5px; background-color:rgb(25, 25, 51)"><h1> Search Report</h1></div><hr>
+
+       <!--Create team home-->
+       <div class="box">
+       <form action="">
+        <div class="container">
+          <h1>Search Existing Report</h1>
+         
+          <hr>
+      
+          <label for="email"><b>Search By Name / ID / Number</b></label>
+          <input type="text" placeholder="Write something" name="email" required>
+      
+         
+          <hr>
+         
+      
+          <button type="submit" class="registerbtn">Search</button>
+        </div>
+        
+      </form>
+      </div>
+      
 
 
-       </ul>
-     </nav>
-  </div>
-</div>
-<!--off canvas menu-->
+      <!--Sidenav-->
+      <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+        </script>
 
-<main class="mt-5 pt-3">
-  <div class="container-fluid">
-    <div class="row">
-     
-    </div>
-   
-       
-        <div class="container ">
-            <h3 class="text-light" style="text-align: center;">Search report</h3>
-               <div class="modal-dialog bg-info">
-                 <div class="modal-content">
-                   <div class="modal-header">
-                     <h4 class="modal-title">Search Existing Reports</h4>
-                     
-                   </div>
-                   <div class="modal-body">
-                     <form action="">
-                         <div class="mb-3">
-                             <label for="website title" class="col-form-label">Search By name/Location/Number:</label>
-                             <input class="form-control mr-sm-2" type="text" placeholder="write Something">
-                         </div>
-                        
-                        
-                     </form>
-                   </div>
-                   <div class="modal-footer">
-                 <button type="button" class="btn btn-primary m-1 p-2" >Search</button>
-     
-                     <button  type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-                   </div>
-                   
-                 </div>
-               </div>
-           
-             
-         </div>
-     
-
-    </div>
-  </div>
-</main>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script>
+    
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+    
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+      } else {
+      dropdownContent.style.display = "block";
+      }
+      });
+    }
+    </script>
 </body>
 </html>

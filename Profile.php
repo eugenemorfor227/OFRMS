@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
-    <title>Create New team</title>
+    <title>Manage Profile</title>
 </head>
 <style>
     /*Topnav*/
@@ -14,13 +14,11 @@
         padding: 0;
         height: 100%;
         font-family: 'Times New Roman', Times, serif;
-        background: url(bg.jpg);
-       
+        background-color:blue;
     }
     .topnav {
   overflow: hidden;
   background-color:rgb(24, 24, 59);
-    position: f;
   
 }
 
@@ -147,7 +145,7 @@
 }
 
 /* Full-width input fields */
-input[type=text], input[type=password], input[type=number] {
+input[type=text], input[type=password],input[type=file],input[type=number],input[type=email] {
   width: 93%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -195,7 +193,6 @@ hr {
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
-    
 
 }
 
@@ -203,7 +200,7 @@ hr {
 <body>
      <!--topnav-->
      <div class="topnav" id="myTopnav">
-        <span style="margin-left: 20px; font-size:30px;cursor:pointer; color:white" onclick="openNav()">&#9776;</span>
+        <span style="margin-left: 20px; font-size:30px;cursor:pointer; color:white;" onclick="openNav()">&#9776;</span>
         <a href="Profile.php" class="active">Profile <i style="padding-left: 5px;" class="fa fa-caret-down"></i></a>
         
         
@@ -250,30 +247,37 @@ hr {
         <a href="Website_setting.php"><i class="fa fa-gear"></i>Website Setting</a>
         <a href="index.php"><i class="fa fa-home"></i>Home</a>
       </div><hr>
-      <div  style="color: rgb(255, 255, 255); text-shadow: 2px 3px 3px rgb(253, 253, 255); text-align: center; padding: 5px; background-color:rgb(25, 25, 51)"><h1> Create New Team</h1></div><hr>
+      <div  style="color: rgb(255, 255, 255); text-shadow: 2px 3px 3px rgb(253, 253, 255); text-align: center; padding: 5px; background-color:rgb(25, 25, 51)"><h1> My Profile</h1></div><hr>
 
        <!--Create team home-->
        <div class="box">
-       <form action="New_team_data.php" method="POST">
+       <form action="">
         <div class="container">
-          <h1>Create Team</h1>
-          <p>Please fill in this form to create a new team.</p>
+          <h1>Manage Your Profile Details</h1>
+          
           <hr>
       
-          <label for="name"><b>Name</b></label>
-          <input type="text" placeholder="Team Name" name="name" required>
+          <label for="fname"><b>First Name</b></label>
+          <input type="text" placeholder="First Name" name="fname" required>
       
-          <label for="leader"><b>Password</b></label>
-          <input type="text" placeholder="team Leader" name="leader" required>
-      
-          <label for="number"><b>Leader's Phonenumber</b></label>
-          <input type="number" placeholder="Leader's Phonenumber" name="number" required>
+          <label for="name"><b>Lastname</b></label>
+          <input type="text" placeholder="Last name" name="lname" required>
+
+          <label for="number"><b>Phonenumber</b></label>
+          <input type="number" placeholder="Phone number" name="number" required>
+
+          <label for="email"><b>Email</b></label>
+          <input type="email" placeholder="Email" name="email" required>
+
+          <label for="location"><b>Location</b></label>
+          <input type="text" placeholder="Your Location" name="location" required>
+         
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="@Username" name="username" required>
           <hr>
          
-          <label for="mwmbers"><b>Members(Separate with Commas)</b></label>
-          <input type="text" placeholder="Team Members" name="members" required>
       
-          <button name="submit" type="submit" class="registerbtn">Create</button>
+          <button type="submit" class="registerbtn">Update</button>
         </div>
         
       </form>
